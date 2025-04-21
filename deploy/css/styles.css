@@ -436,3 +436,25 @@ textarea {
 #packages #package-cards-container .selected {
   background-color: var(--white);
 }
+
+/* =============
+    Newsletter
+============= */
+#newsletter {
+  background-color: var(--lily);
+}
+#newsletter h1 {
+  color: var(--nightblue);
+}
+#newsletter p {
+  color: var(--grey);
+}
+#newsletter form input {
+  border: none;
+  color: var(--grey);
+}
+#newsletter form button {
+  border: none;
+  background-color: var(--nightblue);
+  color: var(--white);
+}
