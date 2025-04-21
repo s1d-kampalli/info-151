@@ -338,9 +338,23 @@ html {
 /* =============
     Typography
 ============= */
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.section-title {
+  color: var(--nightblue);
+  font-size: 3.125rem;
+  line-height: 4.0625rem;
+}
+
 /* =============
     Buttons
 ============= */
+a {
+  text-decoration: none;
+}
+
 /* =============
     Forms
 ============= */
@@ -376,15 +390,17 @@ textarea {
 #hero {
   background-color: var(--lily);
 }
-#hero section article h1 {
-  color: var(--nightblue);
-}
 #hero section article p {
   color: var(--grey);
+  font-weight: 600;
+  line-height: 1.75rem;
 }
 #hero section article a:link, #hero section article a:visited {
   background-color: var(--nightblue);
   color: var(--white);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
 }
 #hero section article button {
   background-color: var(--white);
@@ -395,6 +411,12 @@ textarea {
 }
 #hero section #hero-card h5 {
   color: var(--nightBlue);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+#hero section #hero-card p {
+  font-size: 0.875rem;
+  font-weight: 600;
 }
 
 /* =============
@@ -426,14 +448,23 @@ textarea {
 }
 #packages #package-cards-container .package-card p {
   color: var(--nightblue);
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 #packages #package-cards-container .package-card h4 {
   color: var(--grey);
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.75rem;
 }
 #packages #package-cards-container .package-card h3 {
   color: var(--aqua);
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.75rem;
 }
-#packages #package-cards-container .selected {
+#packages .selected {
   background-color: var(--white);
 }
 
@@ -443,18 +474,20 @@ textarea {
 #newsletter {
   background-color: var(--lily);
 }
-#newsletter h1 {
-  color: var(--nightblue);
-}
 #newsletter p {
   color: var(--grey);
+  font-weight: 600;
+  line-height: 1.75rem;
 }
 #newsletter form input {
   border: none;
   color: var(--grey);
+  font-weight: 600;
 }
 #newsletter form button {
   border: none;
   background-color: var(--nightblue);
   color: var(--white);
+  font-weight: 600;
+  font-size: 0.875rem;
 }
