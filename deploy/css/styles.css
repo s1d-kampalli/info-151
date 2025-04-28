@@ -669,13 +669,39 @@ textarea {
   background-color: var(--lily);
   padding: 60px 16px;
 }
-#newsletter #newsletter-content p {
+@media (min-width: 768px) {
+  #newsletter #newsletter-content {
+    padding: 60px 20vw;
+  }
+}
+@media (min-width: 992px) {
+  #newsletter #newsletter-content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 60% 60px auto;
+    grid-template-columns: 60% auto;
+    padding: 0px 0px;
+    gap: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  #newsletter #newsletter-content {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 992px) {
+  #newsletter #newsletter-content #newsletter-left {
+    padding: 60px 0px 0px 60px;
+  }
+}
+#newsletter #newsletter-content #newsletter-left p {
   color: var(--grey);
   font-weight: 600;
   line-height: 1.75rem;
   margin: 16px 0;
 }
-#newsletter #newsletter-content form input {
+#newsletter #newsletter-content #newsletter-left form input {
   border: none;
   color: var(--grey);
   font-weight: 600;
@@ -686,18 +712,38 @@ textarea {
   border-radius: 8px;
   margin-bottom: 16px;
 }
-#newsletter #newsletter-content form div {
+#newsletter #newsletter-content #newsletter-left form div {
   text-align: right;
 }
-#newsletter #newsletter-content aside {
+#newsletter #newsletter-content #newsletter-left aside {
   display: none;
+}
+@media (min-width: 992px) {
+  #newsletter #newsletter-content #newsletter-left aside {
+    display: block;
+    margin-top: -50px;
+  }
 }
 
 /* =============
     About
 ============= */
-#about {
-  padding: 100px 24px;
+@media (min-width: 768px) {
+  #about {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "about-content" "about-img";
+    padding: 100px 100px;
+  }
+}
+@media (min-width: 1200px) {
+  #about {
+    -ms-grid-columns: 40% auto;
+    grid-template-columns: 40% auto;
+        grid-template-areas: "about-content about-img";
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 #about #top-content {
   margin-bottom: 16px;
@@ -722,13 +768,28 @@ textarea {
   line-height: 1.75rem;
   font-weight: 600;
 }
+@media (min-width: 768px) {
+  #about aside {
+    grid-area: "aside-img";
+    margin: 0 auto;
+  }
+}
 
 /* =============
     Communication
 ============= */
 #comms {
-  padding: 100px 24px;
   text-align: center;
+}
+@media (min-width: 768px) {
+  #comms {
+    padding: 100px 100px;
+  }
+}
+@media (min-width: 1200px) {
+  #comms {
+    padding: 100px 350px;
+  }
 }
 #comms p {
   margin-top: 24px;
@@ -742,8 +803,10 @@ textarea {
 /* =============
     Works
 ============= */
-#works {
-  padding: 100px 24px;
+@media (min-width: 1200px) {
+  #works {
+    padding: 100px 24px;
+  }
 }
 #works #top-content {
   text-align: center;
@@ -753,6 +816,55 @@ textarea {
   text-align: center;
   color: var(--grey);
   margin-bottom: 24px;
+}
+@media (min-width: 768px) {
+  #works #works-card-container {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "card-1" "card-2" "card-3";
+    padding: 0px 100px;
+  }
+  #works #works-card-container > #card-1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  #works #works-card-container > #card-2 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  #works #works-card-container > #card-3 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+}
+@media (min-width: 1200px) {
+  #works #works-card-container {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "card-1 card-2 card-3";
+    padding: 0px 50px;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  #works #works-card-container > #card-1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  #works #works-card-container > #card-2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+  }
+  #works #works-card-container > #card-3 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 1;
+  }
 }
 #works #works-card-container .works-card {
   border: 1px solid var(--ghost);

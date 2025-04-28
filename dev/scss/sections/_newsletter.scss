@@ -10,6 +10,26 @@
     #newsletter-content{
         background-color: var(--lily);
         padding: 60px 16px;
+        @include helpers.md {
+            padding: 60px 20vw;
+          }
+      
+          @include helpers.lg {
+            display: grid;
+            grid-template-columns: 60% auto;
+            padding: 0px 0px;
+            gap: 60px;
+          }
+      
+          @include helpers.xl {
+            width: 1200px;
+            margin: 0 auto;
+          }
+      
+          #newsletter-left {
+            @include helpers.lg {
+              padding: 60px 0px 0px 60px;
+            }
 
         p{
             color: var(--grey);
@@ -38,6 +58,12 @@
         aside{
             // week 4 code
             display: none;
+
+            @include helpers.lg {
+                display: block;
+                margin-top: -50px;
+              }
         }
     }
+}
 }
