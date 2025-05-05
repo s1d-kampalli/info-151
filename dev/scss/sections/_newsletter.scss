@@ -10,6 +10,8 @@
     #newsletter-content{
         background-color: var(--lily);
         padding: 60px 16px;
+
+
         @include helpers.md {
             padding: 60px 20vw;
           }
@@ -25,6 +27,19 @@
             width: 1200px;
             margin: 0 auto;
           }
+
+          button {
+            height: 60px;
+            width: 150px;
+            border: none;
+            background-color: var(--nightblue);
+            color: var(--white);
+            font-weight: 600;
+            font-size: helpers.rem-calc(14);
+            border-radius: 5%;
+            margin-left: auto;
+            display: block;
+          }
       
           #newsletter-left {
             @include helpers.lg {
@@ -38,21 +53,40 @@
             margin: 16px 0;
         }
     
-        form{
-            input{
-                border: none;
-                color: var(--grey);
-                font-weight: 600;
-                width: 100%;
-                padding: 24px 8px;
-                box-sizing: border-box;
-                border-radius: 8px;
-                margin-bottom: 16px;
+        form {
+          @include helpers.md {
+            display: flex;
+            align-items: center;
+            padding: 12px 8px;
+            background-color: var(--white);
+          }
+  
+          input {
+            border: none;
+            color: var(--grey);
+            font-weight: 600;
+            width: 100%;
+            padding: 24px 8px;
+            box-sizing: border-box;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            @include helpers.md {
+              margin-bottom: 0;
             }
+          }
+        }
 
-            div{
-                text-align: right;
-            }
+        ::-placeholder {
+          color: var(--grey);
+          opacity: 1;
+        }
+
+        ::-ms-input-placeholder {
+          color: var(--grey);
+        }
+
+        div {
+          text-align: right;
         }
 
         aside{

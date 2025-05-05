@@ -17,6 +17,10 @@
     text-align: center;
     color: var(--grey);
     margin-bottom: 24px;
+
+    @include helpers.md {
+      padding: 0px 220px;
+    }
   }
 
   #works-card-container {
